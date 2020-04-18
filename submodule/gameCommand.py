@@ -20,7 +20,8 @@ class GameCommand:
 						, 'help' 		: self.help
 						, 'inbeker'		: self.inbeker
 						, 'schud' 		: self.schud
-						, 'scorekaar' 	: 'self.scorekaart'
+						, 'scorekaart' 	: 'self.scorekaart'
+						, 'save'		: 'self.save'
 		}
 		
 	def kijk(self,*args):
