@@ -23,7 +23,7 @@ class Game:
 		self.tafel = Tafel()
 		#gameCommands
 		self.gameCommand = GameCommand(self)
-		self.scoreKaart = ScoreKaart()
+		self.scorekaart = ScoreKaart()
 		#beurtCounter
 		self.aantalWorpenOver = 3
 	

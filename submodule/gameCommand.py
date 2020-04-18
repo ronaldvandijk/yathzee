@@ -20,7 +20,7 @@ class GameCommand:
 						, 'help' 		: self.help
 						, 'inbeker'		: self.inbeker
 						, 'schud' 		: self.schud
-						, 'scorekaart' 	: 'self.scorekaart'
+						, 'scorekaart' 	: self.scorekaart
 						, 'save'		: 'self.save'
 		}
 		
@@ -86,7 +86,7 @@ class GameCommand:
 			
 			for i in range(0,6):
 				print(".", end='', flush=True)
-				#time.sleep(0.3)
+				time.sleep(0.3)
 
 			self.game.beker.schudden()
 			
@@ -99,7 +99,7 @@ class GameCommand:
 
 				for i in range(0,6):
 					print(".", end='', flush=True)
-					#time.sleep(0.1)
+					time.sleep(0.1)
 
 			print()
 			self.kijk()
@@ -107,8 +107,10 @@ class GameCommand:
 		else:
 			print("Er zitten geen dobbelstenen in de beker.")
 
-		
-
+	def scorekaart(self, *args):
+		if len(args) != 0:
+			None
+		print(self.game.scorekaart)
 
 	def executeCommand(self,command,arguments):
 		self.commands[command](*arguments)

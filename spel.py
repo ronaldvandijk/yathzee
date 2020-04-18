@@ -1,6 +1,7 @@
 class Spel:
-    #
-    score = {'enen'         : None # tel de enen
+    
+    def __init__(self):
+        self.score = {'enen'         : None # tel de enen
             ,'tweeen'       : None # tel de tweeen
             ,'drieen'       : None # tel de drieen
             ,'vieren'       : None # tel de vieren
