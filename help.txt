@@ -1,0 +1,28 @@
+<begin:kijk>
+Het commando 'kijk' zonder argumenten laat zien welke dobbelstenen er op tafel liggen,
+en hoeveel dobbelstenen er in de beker zitten.
+Met het commando 'kijk scorekaart' zie je hoe je op dit moment hebt gescoord.
+<end:kijk>
+
+
+<begin:help>
+Welkom bij Python yathzee. Je kunt de volgende commando's gebruiken.
+ kijk, inbeker, schud, stop
+Voor meer informatie over een commando type je 'help <commando>'
+Wil je hulp over de spelregels, dan typ je 'help spelregels'
+<end:help>
+<begin:stop>
+Type het commando 'stop' om te stoppen. Eventuele spelvoortgang wordt niet opgeslagen.
+<end:stop>
+<begin:spelregels>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut ante imperdiet nisl consectetur commodo sed eu mauris. Duis lorem libero, elementum id ornare a, hendrerit vel nibh. Nullam facilisis, 
+odio ut pharetra lacinia, dui risus suscipit diam, nec pulvinar eros felis ut nisl. 
+Duis at pulvinar sem, vel viverra est. Vestibulum nec rutrum arcu, nec interdum quam. 
+Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. 
+Pellentesque posuere nunc ligula. Integer sodales nibh in dolor tristique lacinia. 
+Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec congue tristique interdum. 
+Cras at nisi vitae diam dapibus imperdiet non sit amet felis. Quisque hendrerit mi sit amet eros malesuada gravida.
+Duis varius odio at massa viverra, eu imperdiet magna aliquet. 
+Mauris in nisi a eros molestie placerat sit amet a purus. Fusce dapibus tortor et magna fermentum lacinia.
+Nullam porta magna sit amet rhoncus volutpat.
+<end:spelregels>
