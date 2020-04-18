@@ -20,15 +20,19 @@ class GameCommand:
 						, 'help' 		: self.help
 						, 'inbeker'		: self.inbeker
 						, 'schud' 		: self.schud
-						, 'scorekaart' 	: self.scorekaart
+						, 'noteer'		: self.noteer
 						, 'save'		: 'self.save'
 		}
 		
 	def kijk(self,*args):
-		self.game.tafel.drukAf()
-		if self.game.beker.aantalInBeker() > 0:
-			print("")
-			print("In de beker zitten " + str(self.game.beker.aantalInBeker()) + " dobbelstenen." )
+		if len(args)!=0:
+			if args[0] == 'scorekaart':
+				print(self.game.scorekaart)
+		else:
+			self.game.tafel.drukAf()
+			if self.game.beker.aantalInBeker() > 0:
+				print("")
+				print("In de beker zitten " + str(self.game.beker.aantalInBeker()) + " dobbelstenen." )
 
 	def help(self,*args):
 
@@ -106,11 +110,10 @@ class GameCommand:
 			self.game.aantalWorpenOver -=1
 		else:
 			print("Er zitten geen dobbelstenen in de beker.")
+		
 
-	def scorekaart(self, *args):
-		if len(args) != 0:
-			None
-		print(self.game.scorekaart)
+	def noteer(self):
+		None
 
 	def executeCommand(self,command,arguments):
 		self.commands[command](*arguments)
