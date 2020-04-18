@@ -23,9 +23,11 @@ class Game:
 		self.tafel = Tafel()
 		#gameCommands
 		self.gameCommand = GameCommand(self)
-		self.scorekaart = ScoreKaart()
+		self.scorekaart = ScoreKaart(self)
 		#beurtCounter
 		self.aantalWorpenOver = 3
+
+	#def reset_round(self):
 	
 	@staticmethod
 	def main():
@@ -46,6 +48,8 @@ class Game:
 				game.gameCommand.executeCommand(command, arguments)
 			else:
 				print("Uw commando is niet herkend. Type voor hulp het commando `help'")
+
+	
 
 if __name__ == "__main__":
 	Game.main()

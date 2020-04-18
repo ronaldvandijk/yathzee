@@ -85,6 +85,10 @@ class GameCommand:
 	
 	def schud(self):
 
+		if self.game.beker.aantalInBeker()==0:
+			# stop alle dobbelstenen in de beker
+			self.inbeker()
+		
 		if self.game.beker.aantalInBeker()>0:
 			print("Schudden", end='', flush=True)
 			
@@ -112,8 +116,40 @@ class GameCommand:
 			print("Er zitten geen dobbelstenen in de beker.")
 		
 
-	def noteer(self):
-		None
+	def noteer(self, *args):
+		if len(args)!=0 and args[0] in self.game.scorekaart.spellen[0].score:
+			if len(self.game.tafel.veld) == 0:
+				print("Er liggen geen dobbelstenen op de tafel. Schud en leeg de beker.")
+				return
+			if self.game.beker.aantalInBeker() != 0:
+				print("Er zitten nog dobbelstenen in de beker. Schud en leeg de bekerstop")
+				return
+			
+			# noteer de enen die op tafel liggen, maar alleen als er nog geen score is.
+			if args[0] == 'enen':
+				self.game.scorekaart.noteer_bovenhelft('enen', 1)
+				return
+			if args[0] == 'tweeen':
+				self.game.scorekaart.noteer_bovenhelft('tweeen', 2)
+				return
+			if args[0] == 'drieen':
+				self.game.scorekaart.noteer_bovenhelft('drieen', 3)
+				return
+			if args[0] == 'vieren':
+				self.game.scorekaart.noteer_bovenhelft('vieren', 4)
+				return
+			if args[0] == 'vijven':
+				self.game.scorekaart.noteer_bovenhelft('vijven', 5)
+				return
+			if args[0] == 'zessen':
+				self.game.scorekaart.noteer_bovenhelft('zessen', 6)
+				return
+			
+			
+			
+			print("Toegestaan argument")
+		else:
+			print("Noteer wat?")
 
 	def executeCommand(self,command,arguments):
 		self.commands[command](*arguments)
