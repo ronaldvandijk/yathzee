@@ -54,7 +54,7 @@ class GameCommand:
 			print(line)
 
 	def stop(self, *args):
-		print("Bedankt voor het spelen, tot een volgende keer.")
+		print("Bedankt voor het spelen. Tot een volgende keer.")
 		self.game.noStop = False
 
 	def inbeker(self, *args):

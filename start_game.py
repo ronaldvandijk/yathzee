@@ -6,6 +6,7 @@ from submodule.gameCommand import GameCommand
 from dobbelsteen import Dobbelsteen
 from beker import Beker
 from tafel import Tafel
+from scorekaart import ScoreKaart
 
 class Game:
 	
@@ -22,6 +23,7 @@ class Game:
 		self.tafel = Tafel()
 		#gameCommands
 		self.gameCommand = GameCommand(self)
+		self.scoreKaart = ScoreKaart()
 		#beurtCounter
 		self.aantalWorpenOver = 3
 	
