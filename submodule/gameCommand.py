@@ -108,7 +108,7 @@ class GameCommand:
 			
 			for i in range(0,6):
 				print(".", end='', flush=True)
-				time.sleep(0.3)
+				time.sleep(0.2)
 
 			self.game.beker.schudden()
 			
@@ -121,7 +121,7 @@ class GameCommand:
 
 				for i in range(0,6):
 					print(".", end='', flush=True)
-					time.sleep(0.1)
+					time.sleep(0.05)
 
 			print()
 			self.kijk()
@@ -132,7 +132,7 @@ class GameCommand:
 
 	def noteer(self, *args):
 		if len(args)!=0 and args[0] in self.game.scorekaart.spellen[0].score:
-			
+
 
 			if len(self.game.tafel.veld) == 0:
 				print("Er liggen geen dobbelstenen op de tafel. Schud en leeg de beker.")
