@@ -7,10 +7,27 @@ Met het commando 'kijk scorekaart' zie je hoe je op dit moment hebt gescoord.
 
 <begin:help>
 Welkom bij Python yathzee. Je kunt de volgende commando's gebruiken.
- kijk, noteer, inbeker, schud, stop
+ kijk, noteer, inbeker, schud, speel, stop
 Voor meer informatie over een commando type je 'help <commando>'
 Wil je hulp over de spelregels, dan typ je 'help spelregels'
 <end:help>
+<begin:inbeker>
+Met het commando 'inbeker' kunnen dobbelstenen, van de tafel, in de beker gestopt worden. Zou na schudden het volgende plaatje op tafel liggen:
+Dobbelstenen van links naar rechts op tafel:
+        Dobbelsteen 0, is een 4
+        Dobbelsteen 1, is een 2
+        Dobbelsteen 2, is een 5
+        Dobbelsteen 3, is een 5
+        Dobbelsteen 4, is een 4
+Met het commando 'inbeker 1,2,3' worden de dobbelstenen met nummer 1,2 en 3 in de beker gestopt. Met het commando 'kijk' zien we het resterende aantal dobbelstenen op de tafel:
+Dobbelstenen van links naar rechts op tafel:
+        Dobbelsteen 0, is een 4
+        Dobbelsteen 1, is een 4
+
+
+In de beker zitten 3 dobbelstenen.
+
+<end:inbeker>
 <begin:noteer>
 Met het commando 'noteer' kun je een score noteren op de scorekaart. 
 Op de scorekaart zie je de `vakjes' waarin je de score kan noteren.
@@ -24,17 +41,45 @@ Met het commando speel kan een ander spel op de scorekaart geactiveerd worden. D
 waarop simultaan gespeeld kan worden. Deze spellen zijn genummerd 0 t/m 5. Door te typen:
     speel <nummer>
     (bijvoorbeeld: 'speel 3')
-kan geschakeld worden naar een ander spel.
+kan geschakeld worden naar een ander spel. Vervolgens met het commando 'kijk scorekaart' kan de speler zien hoe gescoord
+is in dit spel.
 <end:speel>
 <begin:spelregels>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut ante imperdiet nisl consectetur commodo sed eu mauris. Duis lorem libero, elementum id ornare a, hendrerit vel nibh. Nullam facilisis, 
-odio ut pharetra lacinia, dui risus suscipit diam, nec pulvinar eros felis ut nisl. 
-Duis at pulvinar sem, vel viverra est. Vestibulum nec rutrum arcu, nec interdum quam. 
-Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. 
-Pellentesque posuere nunc ligula. Integer sodales nibh in dolor tristique lacinia. 
-Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec congue tristique interdum. 
-Cras at nisi vitae diam dapibus imperdiet non sit amet felis. Quisque hendrerit mi sit amet eros malesuada gravida.
-Duis varius odio at massa viverra, eu imperdiet magna aliquet. 
-Mauris in nisi a eros molestie placerat sit amet a purus. Fusce dapibus tortor et magna fermentum lacinia.
-Nullam porta magna sit amet rhoncus volutpat.
+Yathzee dwingt tot nadenken. Door het handig combineren van de geworpen ogen kunt u uw winkansen verhogen en een zo hoog mogelijk puntental verzamelen. De speler met het hoogst aantal punten wint.
+De spelregels zijn als volgt:
+Iedere speler ontvangt een Yathzee-scorekaart waarop 13 regels voorkomen: enen, tweeen, drieen, enzovoorts tot Grote Straat, Yathzee en Geluk, welke allemaal ingevuld moeten worden. Bij elke ronde moet de speler op een van de 13 regels de score noteren: ofwel de som van de ogen of een 0.
+Beginnen
+Iedere speler gooit een keer. de speler met het hoogste aantal punten mag beginnen.
+Spel
+Iedere beurt bestaat uit hoogstens 3 worpen waarbij de eerste worp met alle 5 stenen gegooid moet worden. Besluit de speler tot een tweede en derde worp dan kan hij daar de 5 stenen weer voor gebruiken, hij kan ook maximal 4 stenen op tfel laten liggen. Op deze manier kan hij bij de tweede of derde poing een hoger aantal punten bereiken.
+Scorekaart (bovenste deel)
+De scorekaart is onderverdeeld in twee helften. In het boverste deel bevinden zich de regels voor 1,2,3,4,5 en 6 ogen. Als de speler besluit op dit deel te gaan noteren, moet hij slechts een telling en optelling maken van de stenen met gelijk aantal ogen en het optelbedrag van deze punten op de overeenkomstige regel noteren. 
+
+Gooit een speler bijvoorbeeld:
+
+en kiest hij voor het bovenste deel, dan kan hij 6 punten op de regel voor 2 ogen noteren.
+Er is echter nog de volgende mogelijkheid: gooir een speler bijvoorbeeld:
+
+dan kan hij een 4 noteren op de regel voor 2 ogen.
+Gooit hij daarentegen
+dan kan hij, als hij wil, 16 noteren op de regel voor 4 ogen, d.w.z. op elke regel van het bovernste deel kan ook een hoger of lager aantal punten genoteerd worden dan er afgebeeld staan. 
+Om een speler een premie van 35 punten extra te behalen moet een speler 63 of meer punten gehaal hebben in het bovenste gedeelte op een willekeurige wijze.
+Scorekaart (onderste deel)
+Het onderste deel van de scorekaart wordt precies zo gespeeld als aangegeven. De regel voor drie-paartje kan slechts dan ingevuld worden als minsten drie stenen hetzelfde aantal punten hebben, bijvoorbeeld:
+6,6,6,3,1
+levert 22 punten op (de som van alle ogen) op de regel voor drie-paartje.
+Vier paartje
+Vier-paartje is de som van alle ogen, onder voorwaarde dat 4 stenen hetzelfde aantal punten hebben. Deze worp:
+3,3,3,3,5
+brengt 17 punten op (de som van alle ogen) voor vier-paartje. er kan ook gescoord worden in de regel voor dri-paartje indien de regel voor vier-paartje is gebruikt. Men kan echter ook in het bovenste deel 12 punten noteren op de derde regel voor 3 ogen.
+Full-House
+Full-House kan men kiezen als men een willekeurige combinatie heeft van drie gelijke ogen van een getal en van twee gelijke ogen van een ander getal. De volgende worp bijvoorbeeld kan met 25 punten genoteerd worden in de regel voor Full-house:
+4,4,4,3,3
+Als de regel Full-House al bezet is kan hij echter ook op de regel voor drie-paartje met 18 punten of in het bovenste deel op regel 4 van 4 ogen genoteerd worden met 12 punten.
+Kleine Straat
+Kleine straat is een opeenvolging van 4 stenen met een oplopend aantal ogen bijvoorbeeld:
+1,2,3,4,3
+2,3,4,5,3
+Opmerking: het aantal ogen op de vijfde steen is niet van belang. Elke kleine straat brengt 30 punten op. 
+Grote straat
 <end:spelregels>
