@@ -13,6 +13,8 @@ class Spel:
             ,'fullhouse'    : None # 3 + 2 dezelfde, 25 punten
             ,'kleinestraat' : None # 4 opeenvolgende nummers, 30 punten
             ,'grotestraat'  : None # 5 opeenvolgende nummers, 40 punten
-            ,'topscore'     : None # 5 dezelfde, 50 punten
+            ,'yathzee'     : None # 5 dezelfde, 50 punten
             ,'chance'       : None # totaal van de stenen
             }
+
+        self.bovenhelft = {'enen', 'tweeen', 'drieen', 'vieren', 'vijven', 'zessen'}

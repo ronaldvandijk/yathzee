@@ -132,6 +132,8 @@ class GameCommand:
 
 	def noteer(self, *args):
 		if len(args)!=0 and args[0] in self.game.scorekaart.spellen[0].score:
+			
+
 			if len(self.game.tafel.veld) == 0:
 				print("Er liggen geen dobbelstenen op de tafel. Schud en leeg de beker.")
 				return
@@ -158,6 +160,10 @@ class GameCommand:
 			if args[0] == 'zessen':
 				self.game.scorekaart.noteer_bovenhelft('zessen', 6)
 				return
+			
+			#print("Noteer score op onderstehelft")
+			self.game.scorekaart.noteer_onderhelft(args[0])
+			return
 		else:
 			print("Noteer wat?")
 
