@@ -6,18 +6,24 @@ class ScoreKaart:
     def __init__(self,game):
         self.spellen = [Spel() for i in range(0,6)]
         self.game = game
-        self.actiefspel = 0
+        self.setActiefspel(0)
 
     def __str__(self):
         # de __str__ methode geeft aan hoe een instantiatie in het geval van print() moet worden afgedrukt.
         # op dit moment wordt alleen de score van 1 spel getoond.
-        output = f"U speelt op dit moment met spel {self.actiefspel} \n"
-        alleSpelScores = self.spellen[0].score
+        output = f"U speelt op dit moment met spel {self.getActiefspel()} \n"
+        alleSpelScores = self.spellen[self.getActiefspel()].score
         
         for spelScore in list(alleSpelScores):
             output = output + f"{spelScore} \t\t: {alleSpelScores[spelScore]} \n"
         
         return output
+
+    def setActiefspel(self, spelnummer):
+        self.actiefspel = int(spelnummer)
+    
+    def getActiefspel(self):
+        return(int(self.actiefspel))
 
     def vakjeIsLeeg(self, naam, spel):
         if spel[naam]:
@@ -26,7 +32,7 @@ class ScoreKaart:
             return True
 
     def noteer_bovenhelft(self,vakje, waarde):
-        spelScore = self.spellen[0].score
+        spelScore = self.spellen[self.getActiefspel()].score
         i = 0
         if self.vakjeIsLeeg(vakje, spelScore):
             for dobbelsteen in self.game.tafel.veld:
