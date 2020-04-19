@@ -55,8 +55,14 @@ class GameCommand:
 					helpLines.append(line)	
 		# de eerste regel kan weg
 		helpLines.pop(0)
+		i=0
 		for line in helpLines:
 			print(line)
+			i+=1
+			# na 10 afgedrukte regels vragen we de gebruiker om verder te gaan.
+			if i%10==0:
+				input("Druk op 'enter' om verder te gaan")
+				continue
 
 	def stop(self, *args):
 		print("Bedankt voor het spelen. Tot een volgende keer.")
