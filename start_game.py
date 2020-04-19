@@ -10,6 +10,8 @@ from scorekaart import ScoreKaart
 
 class Game:
 	
+	__max_aantalworpen = 3
+
 	def __init__(self):
 		self.noStop = True
 		# dit modelleer ik als een set, want geen volgorde.
@@ -25,10 +27,12 @@ class Game:
 		self.gameCommand = GameCommand(self)
 		self.scorekaart = ScoreKaart(self)
 		#beurtCounter
-		self.aantalWorpenOver = 3
+		self.aantalWorpenOver = self.__max_aantalworpen
 
-	#def reset_round(self):
-	
+	def reset_round(self):
+		self.aantalWorpenOver = self.__max_aantalworpen
+		self.gameCommand.inbeker()
+
 	@staticmethod
 	def main():
 		game = Game()
@@ -38,6 +42,10 @@ class Game:
 		while game.noStop:
 	
 			userinput=input("Geef invoer (" + str(game.aantalWorpenOver) + "): ").lower()
+
+			if len(userinput) == 0:
+				print("Geef een command. Type voor hulp het commando `help'")
+				continue
 
 			inputs = userinput.split()
 			

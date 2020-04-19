@@ -19,6 +19,13 @@ Met bijvoorbeeld 'noteer enen' noteer je de enen die op tafel liggen.
 <begin:stop>
 Type het commando 'stop' om te stoppen. Eventuele spelvoortgang wordt niet opgeslagen.
 <end:stop>
+<begin:speel>
+Met het commando speel kan een ander spel op de scorekaart geactiveerd worden. De scorekaart kent zes spellen
+waarop simultaan gespeeld kan worden. Deze spellen zijn genummerd 0 t/m 5. Door te typen:
+    speel <nummer>
+    (bijvoorbeeld: 'speel 3')
+kan geschakeld worden naar een ander spel.
+<end:speel>
 <begin:spelregels>
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut ante imperdiet nisl consectetur commodo sed eu mauris. Duis lorem libero, elementum id ornare a, hendrerit vel nibh. Nullam facilisis, 
 odio ut pharetra lacinia, dui risus suscipit diam, nec pulvinar eros felis ut nisl. 

@@ -1,15 +1,17 @@
 from spel import Spel
 class ScoreKaart:
     #op een scorekaart kunnen de scores van 6 spellen genoteerd worden
+    # op dit moment kunnen we de score van 1 spel bijhouden.
     
     def __init__(self,game):
         self.spellen = [Spel() for i in range(0,6)]
         self.game = game
+        self.actiefspel = 0
 
     def __str__(self):
         # de __str__ methode geeft aan hoe een instantiatie in het geval van print() moet worden afgedrukt.
         # op dit moment wordt alleen de score van 1 spel getoond.
-        output = ""
+        output = f"U speelt op dit moment met spel {self.actiefspel} \n"
         alleSpelScores = self.spellen[0].score
         
         for spelScore in list(alleSpelScores):
@@ -34,10 +36,6 @@ class ScoreKaart:
         else: 
             print('Deze score is al genoteerd, mag niet nog een score noteren')
         
-
-        # kan dit ook verplaatst naar Game?
-        self.game.aantalWorpenOver = 3
-        self.game.gameCommand.inbeker()
-        #self.game.reset_round()
+        self.game.reset_round()
 
     

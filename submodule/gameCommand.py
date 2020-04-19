@@ -21,6 +21,7 @@ class GameCommand:
 						, 'inbeker'		: self.inbeker
 						, 'schud' 		: self.schud
 						, 'noteer'		: self.noteer
+						, 'speel'		: self.speel
 						, 'save'		: 'self.save'
 		}
 		
@@ -82,7 +83,14 @@ class GameCommand:
 		for index in reversed(indexDobbelstenenNaarBeker):
 		 	dobbelsteen = self.game.tafel.veld.pop(index)
 		 	self.game.beker.erinStoppen(dobbelsteen)
-	
+
+	def speel(self, *args):
+		if len(args)!=0:
+			self.game.scorekaart.actiefspel = args[0]
+
+		actiefspel = self.game.scorekaart.actiefspel
+		print(f"U speelt nu met spel {actiefspel}. ")
+
 	def schud(self):
 
 		if self.game.beker.aantalInBeker()==0:
@@ -144,10 +152,6 @@ class GameCommand:
 			if args[0] == 'zessen':
 				self.game.scorekaart.noteer_bovenhelft('zessen', 6)
 				return
-			
-			
-			
-			print("Toegestaan argument")
 		else:
 			print("Noteer wat?")
 
