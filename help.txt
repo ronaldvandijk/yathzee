@@ -31,11 +31,15 @@ In de beker zitten 3 dobbelstenen.
 <begin:noteer>
 Met het commando 'noteer' kun je een score noteren op de scorekaart. 
 Op de scorekaart zie je de `vakjes' waarin je de score kan noteren.
-Met bijvoorbeeld 'noteer enen' noteer je de enen die op tafel liggen.
+Met bijvoorbeeld 'noteer enen' noteer je de enen die op tafel liggen. Sommige scores, bijvoorbeeld carre, vereisen vier gelijke dobbelstenen.
+Indien hier niet aan voldaan kan worden, en de speler heeft toch `noteer carre' als opdracht gegeven, dan wordt in dit vakje een 0 score genoteerd.
 <end:noteer>
 <begin:stop>
 Type het commando 'stop' om te stoppen. Eventuele spelvoortgang wordt niet opgeslagen.
 <end:stop>
+<begin:schud>
+Het commando 'schud', schudt de beker en leegt deze vervolgens.
+<end:schud>
 <begin:speel>
 Met het commando speel kan een ander spel op de scorekaart geactiveerd worden. De scorekaart kent zes spellen
 waarop simultaan gespeeld kan worden. Deze spellen zijn genummerd 0 t/m 5. Door te typen:
